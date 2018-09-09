@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "sagerenu/nodejs"
-    registryCredential = docker-hub-credentials'
+    registryCredential = 'docker-hub-credentials'
     dockerImage = ''
   }
   agent any
