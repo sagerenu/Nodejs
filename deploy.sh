@@ -1,8 +1,9 @@
 #!/bin/bash
-ssh 18.188.160.23
+ssh ubuntu@18.188.160.23
+sudo -i
 tag="latest"
+name="hellonode"
 docker pull sagerenu/hellonode:$tag
-name=$(docker ps |grep sagerenu/hellonode|cut -d " " -f 1 |tail -1 )
 docker stop $name
 docker rm -f $name
-docker docker run -d -p 8000:8080 --name hellonode sagerenu/hellonode:$tag 
+docker run -d -p 8000:8080 --name $name sagerenu/hellonode:$tag
