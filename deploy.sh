@@ -6,4 +6,4 @@ name="hellonode"
 docker pull sagerenu/hellonode:$tag
 docker stop $name
 docker rm -f $name
-docker run -d -p 8000:8080 --name $name sagerenu/hellonode:$tag
+docker run -d -p 8000:8000 --name $name sagerenu/hellonode:$tag
