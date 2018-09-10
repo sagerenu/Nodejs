@@ -31,7 +31,7 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         sh 'echo "ssh to web server and tell it to pull new image"'
-        sh './deploy.sh'        
+        sh 'bash ./deploy.sh'        
 
         }
     }
